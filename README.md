@@ -1,7 +1,8 @@
 # slowed
 
-A slowed + reverb editor for macOS. Everything runs on your own Mac: nothing is
-uploaded, and it works offline.
+A slowed + reverb editor for Apple Silicon Macs. Everything runs on your own
+Mac: nothing is uploaded, and it works offline after the one-time first-run
+downloads.
 
 Slow a track down, pitch it, add reverb and delay, play it back, and export a
 WAV. It can also split a track into stems — vocals on their own, or vocals,
@@ -14,18 +15,21 @@ drums, bass, and everything else — so you can mute or drown any one of them.
 3. The first time only: right-click the app and choose **Open**, then **Open**
    again. macOS asks because the app is not registered with Apple, which costs
    a yearly fee.
+4. Leave slowed open and online while it prepares stem splitting in the
+   background. Progress appears in the app; no Terminal, Homebrew, password, or
+   manual setup is needed.
 
-It opens in your browser at `http://127.0.0.1:3000`. Nothing else to install.
+It opens in your browser at `http://127.0.0.1:3000`.
 
 ## Stems and media links
 
 Slowing, pitch, reverb, delay, and export work straight away.
 
-Splitting stems and opening media links need some extra tools that are too
-large to ship inside the app. Load a track and press **Set up stem splitting**,
-and the app opens a Terminal window that installs them. It takes a while and
-downloads a few gigabytes. The first split then downloads the separation models
-themselves, around 1.2 GB, once.
+On the first open, slowed automatically downloads its private copies of Python,
+FFmpeg, the separator, and its models. They use about 2.4 GB in total. You can
+keep using the normal editor while that runs; stem controls become available
+when the progress banner finishes. The downloads are cached and reused on every
+later launch.
 
 Splitting a three minute track takes a minute or two on an Apple Silicon Mac.
 
