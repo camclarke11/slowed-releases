@@ -39,6 +39,7 @@ The app checks for a new version when it starts. When there is one, a bar
 appears at the top of the page: press **Update** and it installs itself and
 reloads. There is no need to download anything again by hand.
 
-If stem setup failed in version 0.1.2, install the offered 0.1.3 update and
-press **Try again**. Version 0.1.3 removes the accidental Apple developer-tools
-requirement and reuses any downloads that already completed.
+If stem setup failed in version 0.1.2 or 0.1.3, install the offered 0.1.4
+update and press **Try again**. Version 0.1.4 removes the accidental Apple
+developer-tools requirement, safely handles the normal `Application Support`
+path, and reuses any downloads that already completed.
